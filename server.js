@@ -4,12 +4,13 @@ const path = require("path");
 
 const app = express();
 
-// Serve only the static files form the angularapp directory
-app.use(express.static(__dirname + "/acyirapp"));
+// Serve only the static files form the dist directory
+// Replace the '/dist/<to_your_project_name>'
+app.use(express.static(__dirname + "/dist/acyira"));
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/acyirapp/index.html"));
+  // Replace the '/dist/<to_your_project_name>/index.html'
+  res.sendFile(path.join(__dirname + "/dist/acyira/index.html"));
 });
-
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);
