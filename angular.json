@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "acyira"
+    }
+  },
+  "defaultProject": "acyira",
+  "cli": {
+    "analytics": false
+  }
 }
